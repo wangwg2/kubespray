@@ -1,0 +1,22 @@
+# file: inventory.yml
+
+## coreos
+core-01 ansible_host=192.168.99.71 ansible_python_interpreter=/home/core/bin/python
+core-02 ansible_host=192.168.99.72 ansible_python_interpreter=/home/core/bin/python
+core-03 ansible_host=192.168.99.73 ansible_python_interpreter=/home/core/bin/python
+
+[kube-master]
+core-01
+
+[etcd]
+core-01
+core-02
+core-03
+
+[kube-node]
+core-02
+core-03
+
+[k8s-cluster:children]
+kube-node
+kube-master
