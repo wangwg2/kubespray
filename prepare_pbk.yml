@@ -1,0 +1,14 @@
+# file: prepare_pbk.yml (inventory: sshca_hosts.yml)
+---
+- hosts: localhost tests
+  become: yes
+  roles:
+    - wangwg2.sshca
+    # - { role: wangwg2.sshca, sshca_user: "core" }
+    - wangwg2.config
+    - wangwg2.hosts
+
+- hosts: localhost
+  become: yes
+  roles:
+    - wangwg2.package

@@ -110,6 +110,7 @@ IP Address      Role              CPU   Memory
 所有节点需要设定/etc/hosts解析到所有主机。
 修改所有节点的/etc/resolv.conf
 
+`ansible-playbook -i inventory/hosts_tests.yml prepare_pbk.yml`
 
 ---
 ### Installing Kubernetes On-premises/Cloud Providers with Kubespray

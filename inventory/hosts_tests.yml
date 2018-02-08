@@ -1,27 +1,14 @@
-# file: inventory.cfg
-[all]
+## file: hosts_tests.yml
+# hosts
+localhost ansible_host=127.0.0.1 ansible_connection=local
+
+[tests]
 test    ansible_host=192.168.99.30
 test01  ansible_host=192.168.99.31
 test02  ansible_host=192.168.99.32
 test03  ansible_host=192.168.99.33
 
-[all:vars]
+[tests:vars]
 ansible_connection=ssh
 ansible_user=vagrant
-
-[kube-master]
-test
-
-[etcd]
-test
-test01
-test02
-
-[kube-node]
-test01
-test02
-test03
-
-[k8s-cluster:children]
-kube-node
-kube-master
+ansible_ssh_private_key_file="~/.ssh/vagrant.pem"

@@ -61,7 +61,7 @@ docker_options: "--insecure-registry={{ kube_service_addresses }} --insecure-reg
 
 在kubespray根目录，执行:
 ```shell
- ansible-playbook -u centos -b -i inventory/inventory.cfg cluster.yml
+ansible-playbook -u centos -b -i inventory/inventory.cfg cluster.yml
 ```
 
 ### 6. 验证安装
