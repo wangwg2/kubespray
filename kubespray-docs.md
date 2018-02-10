@@ -60,7 +60,7 @@
 所有节点需要设定/etc/hosts解析到所有主机。
 修改所有节点的/etc/resolv.conf
 
-`ansible-playbook -i inventory/hosts_tests.yml prepare_pbk.yml`
+`ansible-playbook -i inventory/hosts_tests.yml pbk_prepare.yml`
 
 @import "inventory/hosts_tests.yml"
-@import "./prepare_pbk.yml"
+@import "./pbk_prepare.yml"
